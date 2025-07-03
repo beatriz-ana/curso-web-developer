@@ -4,7 +4,7 @@ body, html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 ul { list-style: none; padding-left: 5px; }
-a { color:blue; text-decoration: none;}
+a { color:rgb(127, 127, 248); text-decoration: none;}
 .bar {
     background-color: #f9f9fb;
     padding:15px;
@@ -28,15 +28,16 @@ h2 {
   color: #444;
 }
 .content {
-    max-width: 1440px;
-    margin: auto;
-    grid-gap: 3rem;
-    display: grid;
-    gap: 3rem;
-    grid-template-areas: "sidebar main anchors";
-    grid-template-columns: minmax(0,15rem) minmax(0,2.5fr) minmax(0,15rem);
-    padding-left: 1rem;
-    padding-right: 1rem;
+  max-width: 1440px;
+  margin: auto;
+  display: grid;
+  gap: 3rem;
+  grid-template-areas:
+    "sidebar main"
+    "anchors anchors"; /* anchors vai embaixo, ocupando 2 colunas */
+  grid-template-columns: minmax(0, 15rem) minmax(0, 1fr);
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .footer {
   min-height: 100px;
@@ -45,7 +46,7 @@ h2 {
   padding: 20px;
   text-align: center;
 }
-.sidebar { 
+.sidebar {
   border-right: solid 1px #cdcdcd;
   grid-area: sidebar;
 }
@@ -55,8 +56,8 @@ h2 {
 }
 
 .anchors {
-  border-left: solid 1px #cdcdcd;
-  padding-left: 15px;
+  border-top: solid 1px #cdcdcd;
+  padding-top: 15px;
   grid-area: anchors;
 }
 figure {
